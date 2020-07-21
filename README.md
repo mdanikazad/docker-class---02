@@ -22,9 +22,11 @@ sudo ip netns exec red ip link
 
 
 #To create virtual interface pair
+
 sudo ip link add veth-red type veth peer name veth-green
 
 #Assign the interfaces to Namespaces
+
 sudo ip link set veth-red netns red
 sudo ip link set veth-green netns green
 
@@ -46,7 +48,6 @@ sudo ip netns exec green ip link set lo up
 
 sudo ip netns exec red ip link set veth-red up
 sudo ip netns exec green ip link set veth-green up
-
  
 #To ping another namespace by IP
 sudo ip netns exec green ping 192.168.15.1
