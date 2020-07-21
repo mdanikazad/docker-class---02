@@ -12,8 +12,8 @@ Network Namespace creation
 
 To create network namespace
 
-sudo ip netns add red
-sudo ip netns add green
+#sudo ip netns add red
+#sudo ip netns add green
 
 To list out network namespace
 sudo ip netns 
